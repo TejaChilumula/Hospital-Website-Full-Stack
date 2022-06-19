@@ -1,0 +1,25 @@
+<div id="a">Doctors</div>
+<br>
+<div class="row" *ngFor="let p of doctors , let i = index">
+<div class="col-md-3">
+<mat-card class="example-card" [style.width.px]=327>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title><h1>{{p.name}}</h1></mat-card-title>
+    <mat-card-subtitle>{{p.degree}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>{{p.specialization}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-mini-fab mat-raised-button matTooltip="Delete Appointment details" color="primary"  (click) = "  OpenAppointmentForm()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  &nbsp;&nbsp;&nbsp;
+  </mat-card-actions>
+</mat-card>
+<hr>
+</div>
+</div>

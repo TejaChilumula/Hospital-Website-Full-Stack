@@ -1,0 +1,28 @@
+input {
+  width: 36%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  border:white;
+
+}
+#docdropdown
+{
+  width : 35%;
+  text-align: center;
+  display: inline-block;
+}
+#timedrop
+{
+width : 15%;
+text-align: center;
+display: inline-block;
+}
+
+h1{
+  margin-top: 10px;
+  font-size: 50px;
+}
+:host{
+
+  background-color: #343a40;;
+}

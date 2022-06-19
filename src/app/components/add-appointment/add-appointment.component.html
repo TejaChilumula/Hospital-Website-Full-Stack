@@ -1,0 +1,29 @@
+<h1><b>Add-Appointment</b></h1>
+<form name="AppointmnetForm" [formGroup] = "AppointmentForm" (submit) = 'OnFormSubmit()'>
+
+
+    <mat-label>select Doctor</mat-label>
+      <select class="form-select text-center" id="docdropdown" aria-label="Default select example" formControlName="doctor" >
+
+        <option *ngFor="let d of doctors" [value]="d.id">{{d.name}}</option>
+    </select>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>select date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>&nbsp; &nbsp; &nbsp;<br>
+
+    <mat-label>select Doctor</mat-label>
+    <select class="form-select text-center" id="timedrop" aria-label="Default select example" formControlName="time" >
+
+      <option >11:00 AM </option>
+      <option >2:00 PM </option>
+      <option >3:00 PM </option>
+      <option >4:00 PM </option>
+      <option >5:00 PM </option>
+  </select><br>
+  &nbsp; &nbsp;<button  type="submit" class="btn btn-success"> Book - Appointment</button>
+  </form>

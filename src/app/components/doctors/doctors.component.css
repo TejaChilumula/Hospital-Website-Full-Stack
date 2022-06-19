@@ -1,0 +1,23 @@
+.mat-card-header{
+  padding:5px !important;
+  border: black;
+}
+
+ .mat-card{
+   margin-left: 500px ;
+  padding:0 !important;
+  border: black;
+}
+
+.mat-card-content{
+  padding:5px !important;
+  border: black;
+}
+hr{
+  margin-left: 300px ;
+}
+#a{
+  margin-left: 12px;
+  margin-top: 16px;
+  font-size: 370%;
+}

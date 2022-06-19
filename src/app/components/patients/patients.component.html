@@ -1,0 +1,76 @@
+<h1
+>Appointments</h1>
+<br>
+<!--Name : {{p.name}}&nbsp;&nbsp;
+City : {{p.city}}&nbsp;&nbsp;
+Illness : {{p.illness}}&nbsp;&nbsp;
+Doctor : {{p.n}}&nbsp;&nbsp;-->
+<!--
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title><h2>{{p.name}}</h2></mat-card-title>
+    <mat-card-subtitle>{{p.city}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>{{p.illness}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-mini-fab mat-raised-button matTooltip="Delete Appointment details" color="warn"  (click) = "onDelete(p.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  &nbsp;&nbsp;&nbsp;
+
+    <button mat-mini-fab matTooltip="Edit Appointment details" color="primary"  (click) = "onEdit(p.id)">
+    <mat-icon>edit</mat-icon>
+  </button>
+  </mat-card-actions>
+</mat-card>
+-->
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+      <th scope="col">Doctor</th>
+    </tr>
+  </thead>
+ <tbody>
+
+    <tr *ngFor="let p of patient , let i = index">
+      <th scope="row">{{(indx+i)+1}}</th>
+      <td >{{p.name}}</td>
+      <td >{{p.city}}</td>
+      <td >{{p.illness}}</td>
+      <td >{{p.n}}</td>
+      <td><button mat-mini-fab mat-raised-button matTooltip="Delete Appointment details" color="warn"  (click) = "onDelete(p.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+
+     <button mat-mini-fab matTooltip="Edit Appointment details" color="primary"  (click) = "onEdit(p.id)">
+      <mat-icon>edit</mat-icon>
+    </button> &nbsp; &nbsp; &nbsp; &nbsp;
+    <button mat-mini-fab matTooltip="Edit Appointment details" class="bg-success" (click)="OpenAppointmentForm()">
+      <mat-icon>control_point</mat-icon>
+    </button></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="text-center" id="pagination">
+<button mat-mini-fab matTooltip="Edit Appointment details" color="primary"  (click)="previous()" [disabled]="page==0"><
+</button> &nbsp; &nbsp;
+<button mat-mini-fab matTooltip="Edit Appointment details" color="primary" >
+{{page}}
+</button> &nbsp; &nbsp;
+<button mat-mini-fab matTooltip="Edit Appointment details" color="primary" (click)="next()" [disabled] = 'num < size'>>
+</button>
+
+</div>

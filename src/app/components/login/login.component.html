@@ -1,0 +1,15 @@
+<h1><b>Login</b></h1>
+<form name="LoginForm" [formGroup] = "UserForm" (submit) = 'OnFormSubmit()'>
+<mat-form-field [style.width.px]=327>
+      <input id="in" matInput formControlName="username" placeholder="Username">
+
+    </mat-form-field>
+    <br>
+    <mat-form-field [style.width.px]=327>
+      <input matInput id="in" type = "password" formControlName="password" placeholder="password">
+    </mat-form-field>
+    <br>
+  <button  mat-raised-button type="submit" color="secondary"> Login</button><br><br>
+    New to RedPlus ? &nbsp;<button class="text-center" mat-raised-button type="submit" color="primary"> Register</button>
+
+  </form>

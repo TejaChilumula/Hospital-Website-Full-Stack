@@ -1,0 +1,34 @@
+
+<form [formGroup] = "PatientForm" class="text-center" (submit) = 'OnFormSubmit()'>
+  <h1><b><u>Add Patient</u></b></h1>
+<p>{{successmsg}}</p>
+      &nbsp;&nbsp;<input type="text" formControlName="name" placeholder="Name">
+        <br><br>
+      &nbsp;&nbsp;<input type="text" formControlName="city" placeholder="City">
+        <br><br>
+      &nbsp; &nbsp;<input type="text" formControlName="illness" placeholder="Illness">
+       <br><br>
+       &nbsp; &nbsp;
+
+       <select class="form-select text-center" id="docdropdown" aria-label="Default select example" formControlName="doctor" >
+        <mat-label>select doctor</mat-label>
+        <option *ngFor="let d of doctors" [value]="d.id">{{d.name}}</option>
+      </select>
+      <br/>
+
+      <mat-form-field appearance="fill">
+        <mat-label>select date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>&nbsp; &nbsp; &nbsp;
+
+      <select class="form-select text-center" id="timedrop" aria-label="Default select example" formControlName="time" >
+        <option >11:00 AM </option>
+        <option >2:00 PM </option>
+        <option >3:00 PM </option>
+        <option >4:00 PM </option>
+        <option >5:00 PM </option>
+    </select><br>
+&nbsp; &nbsp; &nbsp;<input class = "btn btn-secondary my-2 my-sm-0"type="submit" value="Add Patient">
+</form>

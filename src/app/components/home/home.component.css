@@ -1,0 +1,33 @@
+.carousel-item
+{
+  height: 12rem;
+}
+
+.carousel-control-next,.carousel-control-prev
+{
+  margin-top: 300px;
+}
+#main
+{
+  margin-top: 15%;
+  margin-left: 3%;
+  font-size: 100px;
+}
+#main_para
+{
+  margin-top: 1%;
+  margin-left: 5%;
+  font-size: 17px;
+}
+#plus
+{
+  margin-top: 15%;
+  margin-left: 20%;
+  font-size: 300px;
+}
+#main_parax
+{
+  margin-top: 1.5%;
+  margin-left: 32%;
+  font-size: 20px;
+}
